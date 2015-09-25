@@ -35,6 +35,15 @@ class First extends Application {
 
         $this->render();
     }
+    
+    function gimme($id) {
+        $this->data['pagebody'] = 'justone';    // this is the view we want shown
+        // build the list of authors, to pass on to our view
+        $source = $this->quotes->get($id);
+        $this->data += $source;
+
+        $this->render();
+    }
 
 }
 
