@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
+ * The page for the fourth quote author.
  * Our quotes model has been autoloaded, because we use it everywhere.
  * 
- * controllers/Welcome.php
+ * controllers/Guess.php
  *
  * ------------------------------------------------------------------------
  */
@@ -20,7 +20,7 @@ class Guess extends Application {
 
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
+        // show the fourth quote author in the list
         $source = $this->quotes->get('4');
         $this->data += $source;
 
@@ -29,5 +29,5 @@ class Guess extends Application {
 
 }
 
-/* End of file Welcome.php */
-/* Location: application/controllers/Welcome.php */
+/* End of file Guess.php */
+/* Location: application/controllers/Guess.php */

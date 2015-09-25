@@ -33,7 +33,7 @@ class Welcome extends Application {
     
     function shucks() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // build the list of authors, to pass on to our view
+        // show the second quote author in the list
         $source = $this->quotes->get('2');
         $this->data += $source;
 
